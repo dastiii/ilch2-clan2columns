@@ -1,0 +1,308 @@
+@import "../../node_modules/font-awesome/scss/font-awesome";
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+
+$brand-primary: #24252A;
+$input-border-focus: $brand-primary;
+$input-border-radius: 0;
+
+$grid-columns: 12;
+$grid-gutter-width: 20px;
+$page-background: url('../images/bg2.png');
+$content-background: darken(#FFFFFF, 5%);
+// $nav-background: #262518;
+$nav-background: $brand-primary;
+$content-border-color: darken($nav-background, 1%);
+// $nav-background: #4E4F49;
+
+// Breadcrumbs
+$breadcrumb-bg: darken($content-background, 5%);
+
+// Mixins
+@mixin shrinkTableCell() {
+    width: 1px;
+    white-space: nowrap;
+}
+
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_theme.scss";
+// @import "resources/assets/sass/font-awesome/font-awesome.scss";
+
+body {
+    background: $page-background
+}
+
+header.pageHeader {
+    margin-bottom: 15px;
+    height: 150px;
+
+    h1 {
+        color: #A63126;
+        font-size: 72px;
+        font-family: 'Kadwa', serif;
+    }
+}
+
+nav.navbar.navbar-default.navbar-custom {
+    background: $nav-background;
+    border-top-left-radius: 7px;
+    // height: 52px;
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 2px solid $content-border-color;
+    border-bottom-width: 0;
+    margin-bottom: 0;
+}
+
+nav.navbar-custom .navbar-toggle {
+    border-color: lighten($nav-background, 3%);
+}
+nav.navbar-custom .navbar-toggle:hover, nav.navbar-custom .navbar-toggle:focus {
+    background-color: lighten($nav-background, 5%);
+}
+nav.navbar-custom .navbar-toggle .icon-bar {
+    background-color: lighten($nav-background, 15%);
+}
+
+nav.navbar.navbar-custom .navbar-collapse {
+    background: $nav-background;
+    border-top: 1px solid lighten($nav-background, 3%);
+}
+
+nav.navbar.navbar-custom ul.navbar-nav > li, nav.navbar.navbar-custom ul.navbar-nav > li.open {
+    margin: 0 5px;
+}
+
+nav.navbar.navbar-custom ul.navbar-nav > li > a, nav.navbar.navbar-custom ul.navbar-nav > li.open > a {
+    color: #fff;
+    display: block;
+    height: 50px;
+    font-family: 'PT Sans Narrow', serif;
+    font-size: ceil(($font-size-base * 1.1));
+    text-transform: uppercase;
+    padding: 0 10px;
+    line-height: 50px;
+}
+
+nav.navbar.navbar-custom ul.navbar-nav li a:hover, 
+nav.navbar.navbar-custom ul.navbar-nav li a:focus, 
+nav.navbar.navbar-custom ul.navbar-nav li.open a:hover, 
+nav.navbar.navbar-custom ul.navbar-nav li.open a:focus,
+nav.navbar.navbar-custom ul.navbar-nav li.dropdown > a:hover,
+nav.navbar.navbar-custom ul.navbar-nav li.dropdown > a:focus,
+nav.navbar-custom .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background: lighten($nav-background, 5%);
+}
+
+nav.navbar.navbar-custom ul.navbar-nav > li.signup > a,
+nav.navbar.navbar-custom ul.navbar-nav > li.signup > a:hover {
+    background: #A6633C;
+}
+
+nav.navbar.navbar-custom ul.navbar-nav > li#menuLogin > .dropdown-menu {
+    padding: 15px;
+}
+
+nav.navbar.navbar-custom ul.navbar-nav > li.signup-or-signin {
+    line-height: 50px;
+    color: lighten($nav-background, 25%);
+    font-family: 'PT Sans Narrow', serif;
+    text-transform: uppercase;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+nav.navbar.navbar-custom ul.navbar-nav li.dropdown ul.dropdown-menu {
+    background: $nav-background;
+    padding-top: 0;
+
+    li.divider {
+        height: 1px;
+        background: lighten($nav-background, 5%)
+    }
+
+    li {
+        height: 30px;
+
+        a {
+            color: #fff;
+            display: block;
+            font-family: 'PT Sans Narrow', serif;
+            font-size: ceil(($font-size-base * 1.1));
+            text-transform: uppercase;
+            padding: 5px 10px;
+        }
+
+        a:hover, a:focus {
+            background: lighten($nav-background, 5%);
+        }
+    }
+}
+div.content {
+    border-left: 2px solid $content-border-color;
+    border-right: 2px solid $content-border-color;
+    padding: 10px;
+    background: $content-background;
+}
+
+div.content-wrapper {
+    @include make-row();
+}
+
+main.content {
+    @include make-md-column(8);
+}
+
+main.full-content {
+    @include make-md-column(12);
+}
+
+aside.sidebar {
+    @include make-md-column(4);
+}
+
+$sidebar-box-default-border: $panel-default-border;
+$sidebar-box-default-heading-text-color: #FFFFFF;
+$sidebar-box-default-heading-bg: $nav-background;
+$sidebar-box-default-heading-border: lighten($sidebar-box-default-heading-bg, 5%);
+
+aside.sidebar > div.box {
+    @include panel-variant($sidebar-box-default-border,
+        $sidebar-box-default-heading-text-color,
+        $sidebar-box-default-heading-bg,
+        $sidebar-box-default-heading-border
+    );
+
+    .panel-body {
+        padding: 10px;
+    }
+
+    .panel-heading {
+        font-family: 'PT Sans Narrow', serif;
+        font-size: ceil(($font-size-base * 1.1));
+        text-transform: uppercase;
+        padding-left: 8px;
+
+        > i.fa {
+            font-size: 14px;
+        }
+
+        > .btn-group > .btn, > .btn {
+            color: darken(#FFFFFF, 10%);
+            background: lighten($sidebar-box-default-heading-bg, 5%);
+        }
+    }
+
+    .panel-heading.inner {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .panel-footer {
+        padding: 5px 5px;
+        text-align: right;
+        border-top-width: 0;
+        background: #fff;
+    }
+}
+
+.content-full-width {
+    @include make-md-column($grid-columns);
+}
+
+// Headings
+h1.content-title,
+h2.content-title,
+h3.content-title,
+h4.content-title,
+h5.content-title,
+h6.content-title {
+    margin-top: 5px;
+    font-family: 'PT Sans Narrow', serif;
+}
+
+table.table tbody tr td.shrink,
+table.table thead tr th.shrink {
+    @include shrinkTableCell();
+}
+
+table.forums {
+    td.post-count {
+        vertical-align: middle;
+        padding-right: 15px;
+    }
+
+    .post-time-diff {
+        font-style: italic;
+    }
+}
+
+footer {
+    text-align: center;
+    line-height: 40px;
+    background: $nav-background;
+    height: 40px;
+    color: lighten($nav-background, 15%);
+    border: 2px solid $content-border-color;
+    border-top-width: 0;
+}
+
+footer ul {
+    width: 80%;
+}
+
+span.label.label-footer {
+    background: lighten($nav-background, 5%);
+    color: lighten($nav-background, 20%);
+    padding: 5px 15px;
+}
+
+// Forums
+.forums > table > thead.category > tr > th {
+    border-bottom: 2px solid $nav-background;
+}
+
+.forums > table > tbody > tr > td.forum-thread-count,
+.forums > table > tbody > tr > td.forum-post-count {
+    @include shrinkTableCell();
+    text-align: center;
+    vertical-align: middle;
+}
+
+.forums > table > tbody > tr > td.forum-last-post {
+    // @include shrinkTableCell();
+}
+
+
+aside ul.ilch_menu_ul > li > a,
+aside ul.ilch_menu_ul > li ul > li > a {
+    display: block;
+    padding: 10px;
+}
+
+aside ul.ilch_menu_ul > li > a:hover,
+aside ul.ilch_menu_ul > li ul > li > a:hover {
+    border-right: 10px solid lighten($brand-primary, 20%);
+}
+
+aside.sidebar > div.panel.box > ul.list-group.ilch_menu_ul > li {
+    padding: 0;
+}
+
+aside.sidebar > div.panel.box > ul.list-group.ilch_menu_ul > li ul {
+    background: darken(#fff, 3%);
+}
+
+aside.sidebar > div.panel.box > ul.list-group.ilch_menu_ul > li ul > li {
+    border-top: 1px solid #ddd;
+    background: #fff;
+}
+
+aside.sidebar > div.panel.box > div.panel-heading {
+    border-radius: 0;
+}
+
+aside.sidebar > div.panel.box > div.panel-heading:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
