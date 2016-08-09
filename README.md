@@ -5,7 +5,7 @@ This is an ilch 2.0 layout powered by bootstrap.
 
 ### Usage
 
-==Automatic installation through admin control panel coming soon==
+**Automatic installation through admin control panel coming soon**
 
 Just copy all the files from *dist/*, create a folder called clan2columns in your layouts folder and paste the contents from *dist/* in. That's how it should look:
 
