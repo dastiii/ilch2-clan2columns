@@ -9,7 +9,7 @@
 // //$config['layouts']['index_full'] = array(array('module' => 'guestbook', 'controller' => 'index', 'action' => 'newentry'));
 // //$config['modulekey'] = 'Name of Module';
 
-return [
+$config = [
     'name' => "clan2columns",
     'version' => '0.0.1',
     'author' => 'Tobias Schwarz',

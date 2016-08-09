@@ -12,7 +12,6 @@
 <body>
     <div class="container">
         <header class="pageHeader">
-            <h1></h1>
         </header>
         <nav class="navbar navbar-default navbar-custom">
             <div class="container-fluid">
