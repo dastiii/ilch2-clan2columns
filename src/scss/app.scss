@@ -1,7 +1,12 @@
 @import "../../node_modules/font-awesome/scss/font-awesome";
-@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+@import 'https://fonts.googleapis.com/css?family=PT+Sans+Narrow';
+@import 'https://fonts.googleapis.com/css?family=Fjalla+One';
 
-$brand-primary: #24252A;
+// $brand-primary: #24252A;
+$brand-primary: #262518;
+$accent-color: #A6633C;
+$accent-color-variation: #A63126;
+
 $input-border-focus: $brand-primary;
 $input-border-radius: 0;
 
@@ -9,10 +14,13 @@ $grid-columns: 12;
 $grid-gutter-width: 20px;
 $page-background: url('../images/bg2.png');
 $content-background: darken(#FFFFFF, 5%);
-// $nav-background: #262518;
+
 $nav-background: $brand-primary;
+$sidebar-heading-bg: $brand-primary;
 $content-border-color: darken($nav-background, 1%);
 // $nav-background: #4E4F49;
+
+$link-color: $accent-color-variation;
 
 // Breadcrumbs
 $breadcrumb-bg: darken($content-background, 5%);
@@ -25,7 +33,6 @@ $breadcrumb-bg: darken($content-background, 5%);
 
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_theme.scss";
-// @import "resources/assets/sass/font-awesome/font-awesome.scss";
 
 body {
     background: $page-background;
@@ -37,11 +44,21 @@ header.pageHeader {
     background: url('../images/header.png');
     border-left: 2px solid $content-border-color;
     border-right: 2px solid $content-border-color;
+    position: relative;
 
     h1 {
-        color: #A63126;
-        font-size: 72px;
-        font-family: 'Kadwa', serif;
+        margin: 0;
+        padding: 0;
+        // color: #A63126;
+        color: $accent-color-variation;
+        font-size: 54px;
+        font-family: 'Fjalla One', sans-serif;
+        background: transparentize(#fff, 0.7);
+        position: absolute;
+        top: 150px;
+        left: 25px;
+        padding: 15px;
+        border-radius: 5px;
     }
 }
 
@@ -86,7 +103,7 @@ nav.navbar.navbar-custom ul.navbar-nav > li > a, nav.navbar.navbar-custom ul.nav
     font-family: 'PT Sans Narrow', serif;
     font-size: ceil(($font-size-base * 1.1));
     text-transform: uppercase;
-    padding: 0 10px;
+    padding: 0 15px;
     line-height: 50px;
 }
 
@@ -114,7 +131,7 @@ nav.navbar.navbar-custom ul.navbar-nav > li.signup-or-signin {
     color: lighten($nav-background, 25%);
     font-family: 'PT Sans Narrow', serif;
     text-transform: uppercase;
-    padding-right: 20px;
+    padding-right: 10px;
     padding-left: 10px;
 }
 
@@ -169,7 +186,7 @@ aside.sidebar {
 
 $sidebar-box-default-border: $panel-default-border;
 $sidebar-box-default-heading-text-color: #FFFFFF;
-$sidebar-box-default-heading-bg: $nav-background;
+$sidebar-box-default-heading-bg: $sidebar-heading-bg;
 $sidebar-box-default-heading-border: lighten($sidebar-box-default-heading-bg, 5%);
 
 aside.sidebar > div.box {
@@ -251,16 +268,7 @@ footer {
     color: lighten($nav-background, 15%);
     border: 2px solid $content-border-color;
     border-top-width: 0;
-}
-
-footer ul {
-    width: 80%;
-}
-
-span.label.label-footer {
-    background: lighten($nav-background, 5%);
-    color: lighten($nav-background, 20%);
-    padding: 5px 15px;
+    margin-bottom: 15px;
 }
 
 // Forums
@@ -284,11 +292,13 @@ aside ul.ilch_menu_ul > li > a,
 aside ul.ilch_menu_ul > li ul > li > a {
     display: block;
     padding: 10px;
+    text-decoration: none;
 }
 
 aside ul.ilch_menu_ul > li > a:hover,
 aside ul.ilch_menu_ul > li ul > li > a:hover {
-    border-right: 10px solid lighten($brand-primary, 20%);
+    // border-left: 10px solid $brand-primary;
+    background: darken(#fff, 3%);
 }
 
 aside.sidebar > div.panel.box > ul.list-group.ilch_menu_ul > li {
@@ -296,12 +306,16 @@ aside.sidebar > div.panel.box > ul.list-group.ilch_menu_ul > li {
 }
 
 aside.sidebar > div.panel.box > ul.list-group.ilch_menu_ul > li ul {
+    padding: 0;
+    list-style-type: none;
     background: darken(#fff, 3%);
 }
 
 aside.sidebar > div.panel.box > ul.list-group.ilch_menu_ul > li ul > li {
     border-top: 1px solid #ddd;
     background: #fff;
+    border-left: 10px solid #ddd;
+    // border-left: 10px solid $brand-primary;
 }
 
 aside.sidebar > div.panel.box > div.panel-heading {
@@ -311,4 +325,10 @@ aside.sidebar > div.panel.box > div.panel-heading {
 aside.sidebar > div.panel.box > div.panel-heading:first-child {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+}
+
+// Breadcrumb
+.breadcrumb_container > ol.breadcrumb > li {
+    text-transform: uppercase;
+    font-family: 'PT Sans Narrow', serif;
 }

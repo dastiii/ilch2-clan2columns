@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Ilch 2.0</title>
+    <title><?= $this->getTitle() ?></title>
     <link href="<?=$this->getLayoutUrl('css/clan2columns.min.css') ?>" rel="stylesheet">
     <script src="<?= $this->getLayoutUrl('js/clan2columns.min.js') ?>"></script>
 </head>
 <body>
     <div class="container">
         <header class="pageHeader">
+            <h1><?= $this->getTitle() ?></h1>
         </header>
         <nav class="navbar navbar-default navbar-custom">
             <div class="container-fluid">
@@ -38,8 +39,7 @@
                                 'menus' => [
                                     'ul-class-root' => 'dropdown-menu',
                                     'ul-class-child' => '',
-                                    'li-class-root' => '',
-                                    'li-class-child' => '',
+                                    'allow-nesting' => false,
                                 ],
                                 'boxes' => [
                                     'render' => false,
@@ -48,36 +48,7 @@
                         ?>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <!-- <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                Welcome<span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Edit your profile</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li>
-                                    <a href="{{ route('backend.users.index') }}">
-                                        <i class="fa fa-th-large fa-fw" style="font-size:14px;"></i> Administration
-                                    </a>
-                                </li>
-                                <li role="separator" class="divider"></li>
-                                <li>
-                                    <a href="{{ route('auth.logout') }}">
-                                        <i class="fa fa-sign-out fa-fw"></i> Logout
-                                    </a>
-                                </li>
-                            </ul>
-                        </li> -->
-                        <li>
-                            <a href="#">Sign in</a>
-                        </li>
-                        <li class="signup-or-signin">or</li>
-                        <li class="signup">
-                            <a href="#">
-                                <i class="fa fa-sign-in fa-fw"></i> Sign up now!
-                            </a>
-                        </li>
+                        <?= $this->getBox('user', 'login', 'login.navbar'); ?>
                     </ul>
                 </div>
             </div>
@@ -86,11 +57,7 @@
             <div class="content-wrapper">
                 <main class="content">
                     <div class="breadcrumb_container">
-                        <div class="breadcrumb_container">
-                            <ol class="breadcrumb">
-                                <li class="active">Home</li>
-                            </ol>
-                        </div>
+                        <?= $this->getHmenu(); ?>
                     </div>
 <!--                     <div class="content-wrapper">
                         <div class="content-full-width"> -->
@@ -110,7 +77,6 @@
                                 'ul-class-root' => 'list-group ilch_menu_ul',
                                 'ul-class-child' => '',
                                 'li-class-root' => 'list-group-item',
-                                'li-class-child' => '',
                             ],
                             'boxes' => [
                                 'render' => true,
@@ -251,6 +217,7 @@
                         </div>
                         <div class="panel-footer"></div>
                     </div> -->
+                    
                 </aside>
             </div>
         </div>
