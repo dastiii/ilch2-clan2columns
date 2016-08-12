@@ -2,10 +2,11 @@
 
 This is an ilch 2.0 layout powered by bootstrap.
 
+**Minimum requirement: Commit `ed33425d77ff963ca30cb00e642be7bb8c1f94be` or above**
+
+![Screenshot](https://github.com/dastiii/ilch2-clan2columns/raw/master/dist/config/screen.png)
 
 ### Usage
-
-**Automatic installation through admin control panel coming soon**
 
 Just copy all the files from *dist/*, create a folder called clan2columns in your layouts folder and paste the contents from *dist/* in. That's how it should look:
 
