@@ -1,2 +1,2 @@
-require('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap.js');
-require('../../node_modules/jquery/dist/jquery.js');
+window.jQuery = window.$ = require('jquery');
+require('bootstrap-sass');

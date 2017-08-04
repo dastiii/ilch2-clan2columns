@@ -1,5 +1,9 @@
 let mix = require('laravel-mix');
 
+mix.options({
+    processCssUrls: false
+});
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,6 +15,7 @@ let mix = require('laravel-mix');
  |
  */
 
+mix.copyDirectory('node_modules/bootstrap-sass/assets/fonts/bootstrap', 'fonts/bootstrap');
+mix.copy('node_modules/font-awesome/fonts/*', 'fonts/');
 mix.sass('src/scss/app.scss', 'css/');
 mix.js('src/js/app.js', 'js/');
-mix.minify(['js/app.js', 'css/app.css']);

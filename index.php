@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title><?= $this->getTitle() ?></title>
-    <link href="<?=$this->getLayoutUrl('css/clan2columns.min.css') ?>" rel="stylesheet">
-    <script src="<?= $this->getLayoutUrl('js/clan2columns.min.js') ?>"></script>
+    <link href="<?=$this->getLayoutUrl('css/app.min.css') ?>" rel="stylesheet">
+    <script src="<?= $this->getLayoutUrl('js/app.min.js') ?>"></script>
 </head>
 <body>
     <div class="container">
@@ -71,7 +71,7 @@
                 </main>
                 <aside class="sidebar">
                     <div class="panel box">
-                    <?= 
+                    <?=
                         $this->getMenu(2,'<div class="panel-heading"><i class="fa fa-navicon"></i> %s</div> %c', [
                             'menus' => [
                                 'ul-class-root' => 'list-group ilch_menu_ul',
@@ -88,11 +88,11 @@
                         <div class="panel-heading">
                             <i class="fa fa-gamepad fa-fw"></i> Community Scoreboard
                             <div class="btn-group pull-right">
-                                <button 
-                                    type="button" 
-                                    class="btn btn-xs text-uppercase dropdown-toggle" 
-                                    data-toggle="dropdown" 
-                                    aria-haspopup="true" 
+                                <button
+                                    type="button"
+                                    class="btn btn-xs text-uppercase dropdown-toggle"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
                                     aria-expanded="false"
                                 >
                                     more <span class="caret"></span>
@@ -152,7 +152,7 @@
                             </tbody>
                         </table>
                         <div class="panel-footer">
-                            
+
                         </div>
                         <div class="panel-heading inner">
                             <i class="fa fa-bars fa-fw"></i> Forums
@@ -217,7 +217,7 @@
                         </div>
                         <div class="panel-footer"></div>
                     </div> -->
-                    
+
                 </aside>
             </div>
         </div>
@@ -225,9 +225,9 @@
             <span class="label label-footer">&copy; 2016</span>
         </footer>
     </div>
-    
+
 
     <!-- JavaScripts -->
-    
+
 </body>
 </html>
