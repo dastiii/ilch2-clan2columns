@@ -1,2 +1,8 @@
 .sass-cache
 node_modules
+mix-manifest.json
+.idea
+js/app.js
+js/app.min.js
+css/app.css
+css/app.min.css
