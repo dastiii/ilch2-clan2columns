@@ -1,42 +1,30 @@
-@import '../../node_modules/font-awesome/scss/font-awesome';
 @import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
 @import url(https://fonts.googleapis.com/css?family=Fjalla+One);
 
-// $brand-primary: #24252A;
-$brand-primary: #262518;
-$accent-color: #A6633C;
-$accent-color-variation: #A63126;
-
-$input-border-focus: $brand-primary;
-$input-border-radius: 0;
-
-$grid-columns: 12;
-$grid-gutter-width: 20px;
-$page-background: url('../images/bg2.png');
-$content-background: darken(#FFFFFF, 5%);
-
-$nav-background: $brand-primary;
-$sidebar-heading-bg: $brand-primary;
-$content-border-color: darken($nav-background, 1%);
-// $nav-background: #4E4F49;
-
-$link-color: $accent-color-variation;
-
-// Breadcrumbs
-$breadcrumb-bg: darken($content-background, 5%);
-
-// Mixins
-@mixin shrinkTableCell() {
-    width: 1px;
-    white-space: nowrap;
-}
+@import 'variables';
 
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_theme.scss";
 
+@import "overrides";
+
+@import "modules/articles";
+
 body {
     background: $page-background;
 }
+
+h1 {
+  font-size: 30px;
+  a {
+    font-size: 20px;
+  }
+}
+h2 { font-size: 24px; }
+h3 { font-size: 18px; }
+h4 { font-size: 14px; }
+h5 { font-size: 12px; }
+h6 { font-size: 12px; }
 
 header.pageHeader {
     // margin-bottom: 15px;
@@ -48,8 +36,6 @@ header.pageHeader {
 
     h1 {
         margin: 0;
-        padding: 0;
-        // color: #A63126;
         color: $accent-color-variation;
         font-size: 54px;
         font-family: 'Fjalla One', sans-serif;
@@ -107,9 +93,9 @@ nav.navbar.navbar-custom ul.navbar-nav > li > a, nav.navbar.navbar-custom ul.nav
     line-height: 50px;
 }
 
-nav.navbar.navbar-custom ul.navbar-nav li a:hover, 
-nav.navbar.navbar-custom ul.navbar-nav li a:focus, 
-nav.navbar.navbar-custom ul.navbar-nav li.open a:hover, 
+nav.navbar.navbar-custom ul.navbar-nav li a:hover,
+nav.navbar.navbar-custom ul.navbar-nav li a:focus,
+nav.navbar.navbar-custom ul.navbar-nav li.open a:hover,
 nav.navbar.navbar-custom ul.navbar-nav li.open a:focus,
 nav.navbar.navbar-custom ul.navbar-nav li.dropdown > a:hover,
 nav.navbar.navbar-custom ul.navbar-nav li.dropdown > a:focus,
@@ -117,9 +103,12 @@ nav.navbar-custom .navbar-nav > .open > a, .navbar-default .navbar-nav > .open >
     background: lighten($nav-background, 5%);
 }
 
-nav.navbar.navbar-custom ul.navbar-nav > li.signup > a,
-nav.navbar.navbar-custom ul.navbar-nav > li.signup > a:hover {
-    background: #A6633C;
+nav.navbar.navbar-custom ul.navbar-nav > li.signup > a {
+  background: $accent-color;
+
+  &:hover {
+    background: $accent-color-variation;
+  }
 }
 
 nav.navbar.navbar-custom ul.navbar-nav > li#menuLogin > .dropdown-menu {
@@ -315,7 +304,6 @@ aside.sidebar > div.panel.box > ul.list-group.ilch_menu_ul > li ul > li {
     border-top: 1px solid #ddd;
     background: #fff;
     border-left: 10px solid #ddd;
-    // border-left: 10px solid $brand-primary;
 }
 
 aside.sidebar > div.panel.box > div.panel-heading {

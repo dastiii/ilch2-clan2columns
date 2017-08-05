@@ -61,7 +61,7 @@
             </nav>
             <div class="content">
                 <div class="content-wrapper">
-                    <main class="content">
+                    <main class="full-content">
                         <div class="breadcrumb_container">
                             <?= $this->getHmenu(); ?>
                         </div>
@@ -71,22 +71,6 @@
                             </div>
                         </div>
                     </main>
-                    <aside class="sidebar">
-                        <div class="panel box">
-                        <?=
-                            $this->getMenu(2,'<div class="panel-heading"><i class="fa fa-navicon"></i> %s</div> %c', [
-                                'menus' => [
-                                    'ul-class-root' => 'list-group ilch_menu_ul',
-                                    'ul-class-child' => '',
-                                    'li-class-root' => 'list-group-item',
-                                ],
-                                'boxes' => [
-                                    'render' => true,
-                                ],
-                            ]);
-                        ?>
-                        </div>
-                    </aside>
                 </div>
             </div>
             <footer>

@@ -1,0 +1,58 @@
+/* Override default ilch styles */
+#clan2columns {
+  .ilch-head {
+    background-color: $accent-color;
+  }
+  .profil {
+    h3 {
+      color: $accent-color;
+    }
+  }
+  .profile-sidebar {
+    .push-menu {
+      i {
+        color: $accent-color;
+      }
+    }
+    .profile-usermenu {
+      ul {
+        li.active {
+          a {
+            color: $accent-color;
+            border-color: $accent-color;
+          }
+        }
+        li {
+          a {
+            &:hover {
+              color: $accent-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .article-keywords-box {
+    padding: 15px;
+  }
+
+  .user-regist-step {
+    .step {
+      background: $gray-lighter;
+      opacity: 0.3;
+      &:hover {
+        color: $accent-color-variation;
+      }
+    }
+    .activestep {
+      color: $accent-color;
+      border-width: 1px !important;
+      border-color:  #ddd !important;
+      background: transparent;
+      height: auto;
+      margin-top: 0;
+      padding-top: 0;
+      opacity: 1;
+    }
+  }
+}

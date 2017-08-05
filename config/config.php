@@ -10,6 +10,12 @@ class Config extends \Ilch\Config\Install
         'author' => 'Tobias Schwarz',
         'link' => 'http://ilch.de',
         'desc' => '2 Spalten Clan Layout',
+        'layouts' => [
+            'index_full' => [
+                ['module' => 'user', 'controller' => 'panel'],
+                ['module' => 'forum'],
+            ]
+        ],
     ];
 
     public function getUpdate($installedVersion)

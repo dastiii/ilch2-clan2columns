@@ -1,0 +1,32 @@
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables';
+
+$brand-primary: #262518;
+$accent-color: #A6633C;
+$accent-color-variation: #A63126;
+
+$btn-primary-bg: $accent-color;
+$btn-primary-color: $gray-lighter;
+
+$input-border-focus: $brand-primary;
+$input-border-radius: 0;
+
+$grid-columns: 12;
+$grid-gutter-width: 20px;
+$page-background: url('../images/bg2.png');
+$content-background: darken(#FFFFFF, 5%);
+
+$nav-background: $brand-primary;
+$sidebar-heading-bg: $brand-primary;
+$content-border-color: darken($nav-background, 1%);
+// $nav-background: #4E4F49;
+
+$link-color: $accent-color-variation;
+
+// Breadcrumbs
+$breadcrumb-bg: darken($content-background, 5%);
+
+// Mixins
+@mixin shrinkTableCell() {
+  width: 1px;
+  white-space: nowrap;
+}
