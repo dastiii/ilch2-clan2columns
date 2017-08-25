@@ -1,11 +1,16 @@
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables';
 
+$container-lg: (1140px + $grid-gutter-width); // Default
+
 $brand-primary: #262518;
 $accent-color: #A6633C;
 $accent-color-variation: #A63126;
 
 $btn-primary-bg: $accent-color;
 $btn-primary-color: $gray-lighter;
+
+$link-color: $accent-color;
+$link-hover-color: $accent-color-variation;
 
 $input-border-focus: $brand-primary;
 $input-border-radius: 0;

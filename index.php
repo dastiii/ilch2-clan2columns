@@ -5,14 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title><?= $this->getTitle() ?></title>
+    <?=$this->getHeader() ?>
 
-    <link href="<?=$this->getLayoutUrl('css/app.css') ?>" rel="stylesheet">
+    <link href="<?=$this->getLayoutUrl('css/app.css?id=2e211915996888919501') ?>" rel="stylesheet">
     <?=$this->getCustomCSS() ?>
 
-    <script src="<?= $this->getLayoutUrl('js/app.js') ?>"></script>
-
-    <?=$this->getHeader() ?>
+    <script src="<?= $this->getLayoutUrl('js/app.js?id=56a27d1935a8a43a59a2') ?>"></script>
 </head>
 <body>
     <div id="clan2columns">

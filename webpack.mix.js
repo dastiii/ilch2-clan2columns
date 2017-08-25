@@ -1,5 +1,6 @@
 let mix = require('laravel-mix');
 
+mix.setPublicPath('./');
 mix.options({
     processCssUrls: false
 });
@@ -19,3 +20,7 @@ mix.copyDirectory('node_modules/bootstrap-sass/assets/fonts/bootstrap', 'fonts/b
 // mix.copy('node_modules/font-awesome/fonts/*', 'fonts/');
 mix.sass('src/scss/app.scss', 'css/');
 mix.js('src/js/app.js', 'js/');
+
+if (mix.inProduction()) {
+    mix.version();
+}

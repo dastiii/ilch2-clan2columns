@@ -38,7 +38,7 @@ $userMapper = $this->get('userMapper');
             <?php if (strpos($content, '[PREVIEWSTOP]') !== false): ?>
                 <?php $contentParts = explode('[PREVIEWSTOP]', $content); ?>
                 <?=reset($contentParts) ?>
-                <a href="<?=$this->getUrl(['action' => 'show', 'id' => $article->getId()]) ?>">
+                <a class="btn btn-primary btn-sm" href="<?=$this->getUrl(['action' => 'show', 'id' => $article->getId()]) ?>">
                     <i class="fa fa-file-text-o"></i> <?=$this->getTrans('readMore') ?>
                 </a>
             <?php else: ?>
