@@ -1,6 +1,6 @@
 {
   "name": "clan2columns",
-  "version": "0.0.1",
+  "version": "1.0.0-beta.2",
   "description": "Simple 2 column clan layout for ilch 2",
   "scripts": {
     "dev": "npm run development",
