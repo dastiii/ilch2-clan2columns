@@ -8,12 +8,13 @@
     <?=$this->getHeader() ?>
 
     <link href="<?=$this->getLayoutUrl('css/app.css?id=2e211915996888919501') ?>" rel="stylesheet">
+    <link href="<?=$this->getLayoutUrl('css/custom.css') ?>" rel="stylesheet">
     <?=$this->getCustomCSS() ?>
 
     <script src="<?= $this->getLayoutUrl('js/app.js?id=56a27d1935a8a43a59a2') ?>"></script>
 </head>
 <body>
-    <div id="clan2columns">
+    <div id="clan2columns" class="custom">
         <div class="container">
             <header class="pageHeader">
                 <h1><?= $this->getTitle() ?></h1>

@@ -1,0 +1,19 @@
+/*
+    Mithilfe dieser Datei, kannst du die vorhandenen Styles aus der app.css überschreiben.
+
+    Um eine höhere Spezifität, als die app.css zu erreichen, musst du meistens (immer) #clan2columns.costum vorstellen.
+    Beispiel:
+
+    #clan2columns.custom a {
+        color: blue;
+    }
+
+    oder, um z.B. die Hintergrundfarbe der Navbar zu ändern:
+
+    #clan2columns.custom nav.navbar.navbar-default.navbar-custom,
+    #clan2columns.custom nav.navbar.navbar-default.navbar-custom .navbar-collapse {
+        background: #000;
+    }
+
+    Wichtig ist hier, wie bereits oben geschrieben, das #clan2columns.custom
+*/
