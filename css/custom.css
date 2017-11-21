@@ -1,7 +1,7 @@
 /*
     Mithilfe dieser Datei, kannst du die vorhandenen Styles aus der app.css überschreiben.
 
-    Um eine höhere Spezifität, als die app.css zu erreichen, musst du meistens (immer) #clan2columns.costum vorstellen.
+    Um eine höhere Spezifität, als die app.css zu erreichen, solltest du immer #clan2columns.custom voranstellen.
     Beispiel:
 
     #clan2columns.custom a {
@@ -15,5 +15,5 @@
         background: #000;
     }
 
-    Wichtig ist hier, wie bereits oben geschrieben, das #clan2columns.custom
+    Wichtig ist hier, wie bereits oben geschrieben, das vorangestellte #clan2columns.custom
 */
