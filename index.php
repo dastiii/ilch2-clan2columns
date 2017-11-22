@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -9,6 +8,7 @@
 
     <link href="<?=$this->getLayoutUrl('css/app.css?id=2e211915996888919501') ?>" rel="stylesheet">
     <link href="<?=$this->getLayoutUrl('css/custom.css') ?>" rel="stylesheet">
+
     <?=$this->getCustomCSS() ?>
 
     <script src="<?= $this->getLayoutUrl('js/app.js?id=56a27d1935a8a43a59a2') ?>"></script>
@@ -93,5 +93,7 @@
             </footer>
         </div>
     </div>
+
+    <?= $this->getFooter() ?>
 </body>
 </html>
