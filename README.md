@@ -1,4 +1,5 @@
 # clan2columns
+> [Aktuelle Version runterladen](https://www.tobias-schwarz.me/ilch2-clan2columns-v1.0.0-beta.3.zip)
 
 This is an ilch 2.0 layout powered by bootstrap.
 
